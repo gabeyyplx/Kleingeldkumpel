@@ -1,6 +1,8 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
+import Ionicons from "@expo/vector-icons/Ionicons";
+
 import DashboardScreen from "./Components/Screens/Dashboard";
 import TransactionsScreen from "./Components/Screens/Transactions";
 import SettingsScreen from "./Components/Screens/Settings";
@@ -11,13 +13,40 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Dashboard" component={DashboardScreen} />
+        <Tab.Screen
+          name="Dashboard"
+          component={DashboardScreen}
+          options={{
+            headerShown: false,
+            tabBarIcon: ({ focused, color, size }) => {
+              return (
+                <Ionicons name="pie-chart-outline" size={size} color={color} />
+              );
+            },
+          }}
+        />
         <Tab.Screen
           name="Transactions"
           component={TransactionsScreen}
-          options={{ headerShown: false }}
+          options={{
+            headerShown: false,
+            tabBarIcon: ({ focused, color, size }) => {
+              return <Ionicons name="list-outline" size={size} color={color} />;
+            },
+          }}
         />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
+        <Tab.Screen
+          name="Settings"
+          component={SettingsScreen}
+          options={{
+            headerShown: false,
+            tabBarIcon: ({ focused, color, size }) => {
+              return (
+                <Ionicons name="settings-outline" size={size} color={color} />
+              );
+            },
+          }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );
