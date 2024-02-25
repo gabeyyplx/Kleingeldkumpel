@@ -23,5 +23,6 @@ export const styles = StyleSheet.create({
 
   accountBalance: {
     fontSize: 32,
+    textAlign: "center",
   },
 });
