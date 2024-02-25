@@ -7,4 +7,21 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+
+  balanceView: {
+    marginBottom: 64,
+  },
+
+  headingSmall: {
+    textAlign: "center",
+    letterSpacing: 2,
+    textTransform: "uppercase",
+    fontSize: 12,
+    fontWeight: 700,
+    marginBottom: 16,
+  },
+
+  accountBalance: {
+    fontSize: 32,
+  },
 });
