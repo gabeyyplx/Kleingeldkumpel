@@ -12,7 +12,11 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+        screenOptions={({ route }) => ({
+          headerShown: false,
+          tabBarActiveTintColor: "#88c0d0",
+        })}>
         <Tab.Screen
           name="Dashboard"
           component={DashboardScreen}
@@ -23,6 +27,7 @@ export default function App() {
                 <Ionicons name="pie-chart-outline" size={size} color={color} />
               );
             },
+            tabBarActiveTintColor: "#88c0d0",
           }}
         />
         <Tab.Screen
@@ -33,6 +38,7 @@ export default function App() {
             tabBarIcon: ({ focused, color, size }) => {
               return <Ionicons name="list-outline" size={size} color={color} />;
             },
+            tabBarActiveTintColor: "#88c0d0",
           }}
         />
         <Tab.Screen
@@ -45,6 +51,7 @@ export default function App() {
                 <Ionicons name="settings-outline" size={size} color={color} />
               );
             },
+            tabBarActiveTintColor: "#88c0d0",
           }}
         />
       </Tab.Navigator>

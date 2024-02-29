@@ -7,6 +7,7 @@ const buttonColor = "#88c0d0";
 
 export const styles = StyleSheet.create({
   container: {
+    paddingVertical: 33,
     flex: 1,
     backgroundColor: background,
     alignItems: "center",
@@ -38,5 +39,38 @@ export const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 32,
     borderRadius: 8,
+    marginBottom: 32,
+  },
+
+  list: {
+    flex: 1,
+    width: "100%",
+  },
+
+  listSectionHeader: {
+    backgroundColor: backgroundAccent,
+    padding: 8,
+    margin: 8,
+    letterSpacing: 2,
+    textTransform: "uppercase",
+  },
+
+  listItem: {
+    flexDirection: "row",
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    justifyContent: "space-between",
+    borderBottomColor: backgroundAccent,
+    borderBottomWidth: 1,
+    fontSize: 20,
+  },
+
+  listItemLabel: {
+    fontSize: 16,
+  },
+
+  listItemValue: {
+    fontSize: 16,
+    fontWeight: "bold",
   },
 });
